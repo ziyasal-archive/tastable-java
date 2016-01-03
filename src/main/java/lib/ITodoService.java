@@ -4,8 +4,7 @@ import lib.models.TodoModel;
 
 import java.util.Set;
 
-public interface TodoRepository {
-
+public interface ITodoService {
     int create(TodoModel todoModel);
 
     TodoModel find(int id);

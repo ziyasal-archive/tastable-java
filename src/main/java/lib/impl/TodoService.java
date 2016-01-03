@@ -1,15 +1,15 @@
 package lib.impl;
 
 import lib.models.TodoModel;
-import lib.TodoRepository;
-import lib.TodoService;
+import lib.ITodoRepository;
+import lib.ITodoService;
 
 import java.util.Set;
 
-public class TodoServiceImpl implements TodoService {
-    private TodoRepository repository;
+public class TodoService implements ITodoService {
+    private ITodoRepository repository;
 
-    public TodoServiceImpl(TodoRepository repository) {
+    public TodoService(ITodoRepository repository) {
         this.repository = repository;
     }
 

@@ -1,12 +1,10 @@
 import com.google.gson.Gson;
-import lib.TodoService;
-import lib.impl.InMemoryTodoRepositoryImpl;
+import lib.ITodoService;
+import lib.impl.InMemoryTodoRepository;
 import lib.models.TodoModel;
-import lib.impl.TodoServiceImpl;
+import lib.impl.TodoService;
 
 import java.util.Date;
-
-import static spark.Spark.*;
 
 public class Main {
 
@@ -14,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TodoService todoService = new TodoServiceImpl(new InMemoryTodoRepositoryImpl());
+        ITodoService todoService = new TodoService(new InMemoryTodoRepository());
         seedSampleData(todoService);
 
         final Gson gson = new Gson();
@@ -22,7 +20,7 @@ public class Main {
         new TodoResource(todoService, gson);
     }
 
-    private static void seedSampleData(TodoService todoService) {
+    private static void seedSampleData(ITodoService todoService) {
         TodoModel model = new TodoModel();
 
         model.setTitle("Clean your room!");

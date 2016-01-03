@@ -1,6 +1,6 @@
 import com.flextrade.jfixture.JFixture;
-import lib.TodoRepository;
-import lib.impl.InMemoryTodoRepositoryImpl;
+import lib.ITodoRepository;
+import lib.impl.InMemoryTodoRepository;
 import lib.models.TodoModel;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,11 +12,11 @@ public class TodoRepositoryTest {
 
     JFixture fixture = new JFixture();
 
-    TodoRepository todoRepository;
+    ITodoRepository todoRepository;
 
     @Before
     public void setUp() {
-        todoRepository = new InMemoryTodoRepositoryImpl();
+        todoRepository = new InMemoryTodoRepository();
     }
 
     @Test

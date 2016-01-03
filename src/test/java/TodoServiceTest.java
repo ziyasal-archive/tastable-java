@@ -1,8 +1,8 @@
 import com.flextrade.jfixture.JFixture;
-import lib.TodoRepository;
-import lib.TodoService;
+import lib.ITodoRepository;
+import lib.ITodoService;
 import lib.models.TodoModel;
-import lib.impl.TodoServiceImpl;
+import lib.impl.TodoService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,15 +19,15 @@ import static org.mockito.Mockito.*;
 @RunWith(MockitoJUnitRunner.class)
 public class TodoServiceTest {
     @Mock
-    TodoRepository todoRepositoryMock;
+    ITodoRepository todoRepositoryMock;
 
     JFixture fixture;
-    TodoService todoService;
+    ITodoService todoService;
 
     @Before
     public void setUp() {
         fixture = new JFixture();
-        todoService = new TodoServiceImpl(todoRepositoryMock);
+        todoService = new TodoService(todoRepositoryMock);
     }
 
 

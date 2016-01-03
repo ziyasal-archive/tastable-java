@@ -1,13 +1,13 @@
 package lib.impl;
 
 import lib.models.TodoModel;
-import lib.TodoRepository;
+import lib.ITodoRepository;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class InMemoryTodoRepositoryImpl implements TodoRepository {
+public class InMemoryTodoRepository implements ITodoRepository {
 
     Set<TodoModel> todoModels = new HashSet<TodoModel>();
 

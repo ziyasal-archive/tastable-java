@@ -1,5 +1,5 @@
 import com.google.gson.Gson;
-import lib.TodoService;
+import lib.ITodoService;
 import lib.models.TodoModel;
 
 import static spark.Spark.get;
@@ -9,7 +9,7 @@ public class TodoResource {
 
     private static final String API_CONTEXT = "/api/v1";
 
-    public TodoResource(TodoService todoService, Gson gson) {
+    public TodoResource(ITodoService todoService, Gson gson) {
 
         post(API_CONTEXT + "/todos", "application/json",
                 (request, response) -> {
