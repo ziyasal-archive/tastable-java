@@ -37,13 +37,10 @@
                     <!-- aggregated reports for multi-module projects -->
                     <aggregate>true</aggregate>
                     <instrumentation>
-                        <!--<ignoreMethodAnnotations>-->
-                        <!--<ignoreMethodAnnotation>lib.interfaci.CoverageIgnore</ignoreMethodAnnotation>-->
-                        <!--</ignoreMethodAnnotations>-->
                         <excludes>
-                            <exclude>src/main/java/TodoResource.class</exclude>
-                            <exclude>src/main/java/JsonTransformer.class</exclude>
-                            <exclude>src/main/java/Main.class</exclude>
+                            <exclude>**/TodoResource.class</exclude>
+                            <exclude>**/JsonTransformer.class</exclude>
+                            <exclude>**/Main.class</exclude>
                         </excludes>
                     </instrumentation>
                 </configuration>
