@@ -38,8 +38,13 @@
                     <aggregate>true</aggregate>
                     <instrumentation>
                         <!--<ignoreMethodAnnotations>-->
-                            <!--<ignoreMethodAnnotation>lib.interfaci.CoverageIgnore</ignoreMethodAnnotation>-->
+                        <!--<ignoreMethodAnnotation>lib.interfaci.CoverageIgnore</ignoreMethodAnnotation>-->
                         <!--</ignoreMethodAnnotations>-->
+                        <excludes>
+                            <exclude>src/main/java/TodoResource.class</exclude>
+                            <exclude>src/main/java/JsonTransformer.class</exclude>
+                            <exclude>src/main/java/Main.class</exclude>
+                        </excludes>
                     </instrumentation>
                 </configuration>
             </plugin>
